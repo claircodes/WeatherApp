@@ -1,0 +1,183 @@
+/* 
+Clair Parsons
+(Thanking YouTube and Instagram for saving my life)
+*/
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+body {
+    height: 100vh;
+    background-image: linear-gradient(to bottom right, black, rgb(54, 54, 54));
+    background-repeat: no-repeat;
+}
+
+
+.search input[type="text"] {
+    height: 3.5rem;
+    width: 20rem;
+    font-size: 1.1rem;
+    padding: 10px;
+    border: 2px solid #c2c2c2;
+    border-radius: 15px;
+    font-family: 'century gothic';
+    justify-content: center;
+}
+
+.search input[type="submit"] {
+    height: 3.5rem;
+    width: 7rem;
+    background: #1b1b1b;
+    font-weight: bold;
+    color: white;
+    font-size: 1.2rem;
+    margin-top: 20px;
+    border: none;
+    border-radius: 15px;
+}
+
+
+.container {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    display: grid;
+    place-items: center;
+}
+
+
+.container .card-wrapper {
+    position: relative;
+    display: grid;
+    place-items: center;
+    text-align: center;
+    z-index: 1;
+    width: 650px;
+    height: 600px;
+    box-shadow: 20px, 20px, 50px rgba(0, 0, 0, 0.5);
+    border-radius: 15px;
+    border-top: 1px solid rgba(255, 255, 255, 0.5);
+    border-left: 1px solid rgba(255, 255, 255, 0.5);
+    background: rgba(145, 145, 145, 0.2);
+    backdrop-filter: blur(50%);
+    overflow: hidden;
+}
+
+.container .card-wrapper .content h3{
+    font-size: 1.8em;
+    color: #fff;
+    font-weight: 300;
+    padding: 2px;
+}
+
+.container .card-wrapper .content h2{
+    font-family: 'Pacifico', cursive;
+    font-size: 3rem;
+    color: #fff;
+    font-weight: 300;
+}
+
+p{
+
+  color: white;
+  font-family: 'century gothic';
+  padding: 1px;
+  font-size: 25px;
+}
+
+.weather-icon{
+  width: 280px;
+  height: 100px;
+  place-items: center;
+  position: relative;
+  margin: auto;
+}
+
+.weather-icon img{
+  margin: auto;
+  position: relative;
+  display: block;
+  display: grid;
+  place-items: center;
+}
+
+/* --------- THIS IS ALL JUST THE RADIO BUTTONS ------------------ */
+
+html,body{
+  display: grid;
+  height: 100%;
+  place-items: center;
+}
+.wrapper{
+  display: inline-flex;
+  height: 100px;
+  width: 300px;
+  align-items: center;
+  justify-content: space-evenly;
+  border-radius: 15px;
+  padding: 20px 15px;
+}
+.wrapper .option{
+  background: #fff;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  margin: 0 10px;
+  border-radius: 15px;
+  cursor: pointer;
+  padding: 0 10px;
+  border: 2px solid lightgrey;
+  transition: all 0.3s ease;
+}
+.wrapper .option .dot{
+  height: 20px;
+  width: 20px;
+  background: #d9d9d9;
+  border-radius: 50%;
+  position: relative;
+}
+.wrapper .option .dot::before{
+  position: absolute;
+  content: "";
+  top: 4px;
+  left: 4px;
+  width: 12px;
+  height: 12px;
+  background: #000000;
+  border-radius: 50%;
+  opacity: 0;
+  transform: scale(1.5);
+  transition: all 0.3s ease;
+}
+input[type="radio"]{
+  display: none;
+}
+#option-1:checked:checked ~ .option-1,
+#option-2:checked:checked ~ .option-2{
+  border-color: #555555;
+  background: #444444;
+}
+#option-1:checked:checked ~ .option-1 .dot,
+#option-2:checked:checked ~ .option-2 .dot{
+  background: rgb(0, 0, 0);
+}
+#option-1:checked:checked ~ .option-1 .dot::before,
+#option-2:checked:checked ~ .option-2 .dot::before{
+  opacity: 1;
+  transform: scale(1);
+}
+.wrapper .option span{
+  font-size: 20px;
+  color: #808080;
+}
+#option-1:checked:checked ~ .option-1 span,
+#option-2:checked:checked ~ .option-2 span{
+  color: #fff;
+}

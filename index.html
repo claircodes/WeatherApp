@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!--Clair Parsons
+WebDevII Final Project-->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--Styles-->
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+
+    <title>Clair's Weather App</title>
+</head>
+<body>
+
+  <!--This Is My Search Bar-->
+    <main class="container">
+        <div class="card-wrapper">
+          <div class="content">
+            <section class="search">
+              <input type="text" placeholder="Enter your zip code" id="zipCode">
+              <input type="submit" value="Submit" id="submitZip">
+
+    <!--My Radio Buttons For Temperature Unit-->
+      <div class="wrapper">
+        <input type="radio" name="select" id="option-1" checked> <!--Made Faranheight my default-->
+        <input type="radio" name="select" id="option-2">
+          <label for="option-1" class="option option-1">
+            <div class="dot"></div>
+             <span>°F</span>
+             </label>
+          <label for="option-2" class="option option-2">
+            <div class="dot"></div>
+             <span>°C</span>
+          </label>
+       </div>
+      </section>
+
+       <!--My API Data Display-->
+        
+       <img src="" alt="" srcset="" id="weather-icon">
+            
+            <h2 id="location"></h2>
+            <p id="desc"></p>
+            <p id="temp"></p>
+          </div>
+        </div>
+      </main>
+     
+        <!--Linking to my Javascript file-->
+        <script src="scripts.js"></script>    
+    
+</body>
+</html>
